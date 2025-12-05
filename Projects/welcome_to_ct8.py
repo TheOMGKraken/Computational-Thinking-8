@@ -27,4 +27,15 @@ print("\n\n")
                                                                                           
                                   
 print("Now it's your turn:")
-print("Find this line (line 30) in the welcome_to_ct8.py file, then change the message to say a fact about you.")                                  
+print("my name is tristan and I have coded on python, lua, and scratch (if you count that).")     
+input("\n don't don't press enter to continue \n")
+input("\n press enter to continue \n")
+viewer = input("\n type your name in here \n")
+print(f"hello {viewer}")
+
+
+print("two truths and a lie")
+print("1. I have a sister who is a full adult")
+print("2. I have never gone skiing")
+print("3. I have only had one pet")
+answer = input("\n type your answer as 1 2 or 3 \n")
