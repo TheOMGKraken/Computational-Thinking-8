@@ -1,22 +1,30 @@
 import time
 import sys
+import random
 
-codes = 0
+
+
+rng = 0
+calc = 0
+code = "yay"
+codes = []
 var = 0
 mainvar = 0
 tyme = 0
-zombie = 0
+zombie = "zombie"
 
-codes = input("input codes here ")
-if codes == "ntb":
+while len(code) != 0:
+    code = input("input codes here ")
+    codes.append(f"{code}")
+
+if "ntb" in codes:
     zombie = "bee"
-if codes != "ntb":
-    zombie = "zombie"
+
 mainvar = input("do you like chose your own adventures?")
-if mainvar != "yes" and mainvar != "y" and mainvar != "yeah" and mainvar != "yep" and codes != "skip":
+if mainvar != "yes" and mainvar != "y" and mainvar != "yeah" and mainvar != "yep" and not "skip" in codes:
     print("well thats too bad")
     time.sleep(7)
-if codes != "skip":
+if not "skip" in codes:
     print("in this cyoa you will be asked a variety of questions")
     time.sleep(2)
     print("for every question, input 1 or 2")
@@ -100,3 +108,55 @@ while var != 1:
             print("unfortunately, you had a essay due that day")
             time.sleep(2)
             raise SystemExit("you died, in a sad way")
+        if mainvar == "2":
+            print("you barricade yourself in the history room")
+            time.sleep(2)
+            print("you wait there for a while")
+            mainvar = input("do you read a book? ")
+            if mainvar != "1" and mainvar != "2":
+                print("die")
+                raise SystemExit("you didn't chose 1 or 2")
+            if mainvar == "1":
+                calc = 20-tyme*5
+                time.sleep(calc)
+            if mainvar == "2":
+                time.sleep(1)
+            mainvar = 0
+            while 1 == 1:
+                mainvar = input(f"{zombie}s are trying to break through! do you 1 try to reinforce the room or 2 try to jump out of the window ")
+                if mainvar != "1" and mainvar != "2":
+                    print("die")
+                    raise SystemExit("you didn't chose 1 or 2")
+                if mainvar == "1":
+                    print("you can barely hold them in")
+                    time.sleep(1)
+                    tyme += 1
+                    continue
+                if mainvar == "2":
+                    if tyme >= 4:
+                        print("you try to jump out the window")
+                        time.sleep(1)
+                        print(f"but the {zombie}s get to you first and kills you")
+                    else:
+                        print("you jump out the window!")
+                        time.sleep(2)
+                        print("as you fall, you see everything")
+                        time.sleep(3)
+                        print("your whole life lead up to this")
+                        time.sleep(3)
+                        print("as you get near the ground, you close your eyes")
+                        if not "lucky" in codes:
+                            rng = random.randint(1,30)
+                            if rng <= 4:
+                                print("you landed in a bush! you escaped!")
+                                time.sleep(4)
+                                raise SystemExit("you lived, in a lucky way")
+                            if rng > 4:
+                                print("you hit the ground")
+                                time.sleep(1)
+                                raise SystemExit("you died, in a splaty way")
+
+
+
+
+
