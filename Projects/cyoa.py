@@ -53,7 +53,13 @@ while var != 1:
         time.sleep(2)
         print(f"you get killed by a {zombie}")
         time.sleep(2)
-        raise SystemExit("you died, in a slow way")
+        rng = random.randint(1, 30)
+        if rng > 5:
+            raise SystemExit("you died, in a slow way")
+        else:
+            print("...")
+            time.sleep(2)
+            raise SystemExit("skip")
     time.sleep(3)
     mainvar = input("do you go to 1: the stairs or 2: try to barricade a classroom? ")
     if mainvar != "1" and mainvar != "2":
@@ -102,13 +108,20 @@ while var != 1:
             print("die")
             time.sleep(3)
             raise SystemExit("idiot")
-        if mainvar == "1":
+        elif mainvar == "1":
             print("you barricade yourself in the english room")
             time.sleep(2)
             print("unfortunately, you had a essay due that day")
             time.sleep(2)
-            raise SystemExit("you died, in a sad way")
-        if mainvar == "2":
+            rng = random.randint(1, 30)
+            if > 5:
+                raise SystemExit("you died, in a sad way")
+            else:
+                time.sleep(2)
+                print("...")
+                time.sleep(2)
+                raise SystemExit("ntb")
+        elif mainvar == "2":
             print("you barricade yourself in the history room")
             time.sleep(2)
             print("you wait there for a while")
@@ -150,12 +163,24 @@ while var != 1:
                             if rng <= 4:
                                 print("you landed in a bush! you escaped!")
                                 time.sleep(4)
-                                raise SystemExit("you lived, in a lucky way")
-                            if rng > 4:
+                                rng = random.randint(1, 30)
+                                if rng > 7:
+                                    raise SystemExit("you lived, in a lucky way")
+                                else:
+                                    print("...")
+                                    time.sleep(2)
+                                    raise SystemExit("lucky")
+                            else:
                                 print("you hit the ground")
                                 time.sleep(1)
                                 raise SystemExit("you died, in a splaty way")
-
+                        else:
+                            print("you landed in a bush! you escaped!")
+                            time.sleep(4)
+                            raise SystemExit("you lived, in a lucky way")
+        elif mainvar == "3":
+            print("you  the")
+            
 
 
 
