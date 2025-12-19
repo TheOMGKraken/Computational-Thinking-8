@@ -103,7 +103,7 @@ while var != 1:
         mainvar = 0
         mainvar = input("which classroom are you going to barricade yourself in? 50# ")
         if mainvar != "1" and mainvar != "2" and mainvar != "3" and mainvar != "4" and mainvar !=  "5":
-            print(f"class {mainvar} isn't a class")
+            print(f"class 50{mainvar} isn't a class")
             time.sleep(3)
             print("die")
             time.sleep(3)
@@ -179,7 +179,47 @@ while var != 1:
                             time.sleep(4)
                             raise SystemExit("you lived, in a lucky way")
         elif mainvar == "3":
-            print("you  the")
+            print("you barricade yourself in the math? room")
+            time.sleep(2)
+            print("idk what to do here")
+            time.sleep(2)
+            raise SystemExit("I don't even know if this is the math room ngl")
+        elif mainvar == "4":
+            print("you barricade yourself in the science room")
+            time.sleep(2)
+            mainvar = 0
+            mainvar = input("do you want to 1. try to make a acid 2. try to make a cure or 3. try to make a poison")
+            if mainvar != "1" and mainvar != "2" and mainvar != "3":
+                print("die")
+                time.sleep(3)
+                raise SystemExit("idiot")
+            elif mainvar == "1":
+                print("you try to make an acid")
+                time.sleep(8)
+                print("bubble bubble")
+                time.sleep(4)
+                rng = random.randint(1, 30)
+                if rng > 23:
+                    print("zombies break the door down before the acid is ready!")
+                    time.sleep(2)
+                    print("they eat you")
+                    time.sleep(2)
+                    raise SystemExit("you died, in a chompy way")
+                elif rng > 2:
+                    print("the acid is ready")
+                    calc = rng - 4
+                    if calc > 1:
+                        time.sleep(calc)
+                    else:
+                        time.sleep(1)
+                    print("the zombies break in!")
+                    time.sleep(2)
+                    print("you chuck the flask")
+                    time.sleep(3)
+                    print("and it does nothing")
+                    time.sleep(2)
+                    raise SystemExit("you died, in a pay-attention-in-science-class way")
+                    
             
 
 
