@@ -156,9 +156,9 @@ if zero > 3:
     input("you got most of the questions incorrect")
 elif one == two == zero:
     input("you got 2 correct answers, 2 semi correct answers, and 2 wrong answers. you are the most average person")
-elif one > 3 or zero == two != one:
+elif one >= 3 or zero == two != one:
     input("you did average")
-elif two > 3:
+elif two >= 3:
     input("you got most of the questions correct")
 
 
