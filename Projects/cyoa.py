@@ -17,7 +17,7 @@ while len(code) != 0:
     code = input("input codes here ")
     codes.append(f"{code}")
 
-if "ntb" in codes:
+if "ntb" in codes or "NTB" in codes:
     zombie = "bee"
 
 mainvar = input("do you like chose your own adventures?")
@@ -114,13 +114,13 @@ while var != 1:
             print("unfortunately, you had a essay due that day")
             time.sleep(2)
             rng = random.randint(1, 30)
-            if > 5:
+            if rng > 5:
                 raise SystemExit("you died, in a sad way")
             else:
                 time.sleep(2)
                 print("...")
                 time.sleep(2)
-                raise SystemExit("ntb")
+                raise SystemExit("NTB")
         elif mainvar == "2":
             print("you barricade yourself in the history room")
             time.sleep(2)
