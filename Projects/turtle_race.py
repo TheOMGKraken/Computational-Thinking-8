@@ -29,8 +29,8 @@ y4 = -150
 set_background("Track")
 t1 = create_sprite("Orange_Horse",x1,y1)
 t2 = create_sprite("White_Horse",x2,y2)
-t3 = create_sprite("White_Hourse",x3,y3)
-t4 = create_sprite("BlackHorse",x4,y4)
+t3 = create_sprite("Disabled_Horse",x3,y3)
+t4 = create_sprite("Black_Horse",x4,y4)
 
 
 # # Section 3 - Racing
@@ -48,6 +48,25 @@ rng3 /= 10
 rng4 /= 10
 
 pwinner = input("Place your bets! Who do you think will win?(orange, white, gray, or black) ")
+
+text1 = create_sprite("EMPTY", -150, 200)
+text1.color("black")
+text1.write("3!", font = ("Arial", 40, "normal"))
+window.update()
+time.sleep(1)
+text1.goto(-50, 200)
+text1.write("2!", font = ("Arial", 40, "normal"))
+window.update()
+time.sleep(1)
+text1.goto(50, 200)
+text1.write("1!", font = ("Arial", 40, "normal"))
+window.update()
+time.sleep(1)
+text1.goto(150, 200)
+text1.write("GO!", font = ("Arial", 40, "normal"))
+window.update()
+time.sleep(1)
+text1.goto(150, 200)
 
 for i in range(30):
     x1 += rng1
@@ -134,14 +153,17 @@ while 1 == 1:
 
 
 if x3 >= x1 and x3 >= x2 and x3 >= x4:
-    print("player 3 wins!")
-    winner = 1
+    print("The Gray Horse won!")
+    winner = 3
 elif x1 >= x2 and x1 >= x3 and x1 >= x4:
-    print("player 1 wins!")
+    print("The Orange Horse won!")
+    winner = 1
 elif x2 >= x1 and x2 >= x3 and x2 >= x4:
-    print("player 2 wins!")
+    print("The White Horse won!")
+    winner = 2
 elif x4 >= x2 and x4 >= x3 and x1 >= x4:
-    print("player 4 wins!")
+    print("The Black Horse won!")
+    winner = 4
 
 if winner == 1:
         if pwinner == "orange" or pwinner == "Orange":
@@ -166,7 +188,9 @@ if youwon == True:
         time.sleep(2)
         print("how the hell did you win ts")
         time.sleep(5)
-        print("lucky i guess")
+        # godly win
+        print("GW")
+    time.sleep(2)
     print("You Won!!!")
      
 
