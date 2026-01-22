@@ -37,6 +37,7 @@ t4 = create_sprite("Black_Horse",x4,y4)
 # # TODO - set how much each variable changes by and increase the number of repeats to at least 30
 # # TODO - explain here which sprites are faster or slower
 
+# orange horse average: 40. white horse average: 45. disabled / gray horse average: 15. black horse average: 45.
 rng1 = random.randint(10, 70)
 rng2 = random.randint(20, 70)
 rng3 = random.randint(10, 20)
