@@ -5,6 +5,7 @@ import random
 
 
 rng = 0
+rng2 = 0
 calc = 0
 code = "yay"
 codes = []
@@ -199,6 +200,9 @@ while var != 1:
                 print("bubble bubble")
                 time.sleep(4)
                 rng = random.randint(1, 30)
+                if "lucky" in codes:
+                    rng = 1
+                
                 if rng > 23:
                     print("zombies break the door down before the acid is ready!")
                     time.sleep(2)
@@ -212,14 +216,57 @@ while var != 1:
                         time.sleep(calc)
                     else:
                         time.sleep(1)
-                    print("the zombies break in!")
+                    print("the {} break in!")
                     time.sleep(2)
                     print("you chuck the flask")
                     time.sleep(3)
                     print("and it does nothing")
                     time.sleep(2)
-                    raise SystemExit("you died, in a pay-attention-in-science-class way")
+                    raise SystemExit("you died, in a dumb way way")
+                else:
+                    print("the acid is ready")
+                    calc = rng - 4
+                    if calc > 1:
+                        time.sleep(calc)
+                    else:
+                        time.sleep(1)
+                    print(f"the {zombie}s break in!")
+                    time.sleep(2)
+                    print("you chuck the flask")
+                    time.sleep(3)
+                    print("And it works!")
+                    time.sleep(1)
+                    print("and then you try to look at your hand")
+                    time.sleep(2)
+                    print("there is nothing there anymore")
+                    time.sleep(1)
+                    print("IDK what to do now this ending is kinda just weird")
+                    time.sleep(3)
+                    print("and then you have a heart attack and die")
+                    time.sleep(3)
+                    raise SystemExit("idk")
+            elif mainvar == "2":
+                print("you try to make a cure")
+                rng = random.randint(1, 100)
+                rng2 = random.randint(1, 20)
+                time.sleep(rng2)
+                print("it is done")
+                time.sleep(2)
+                print(f"you try it on a {zombie}")
+                time.sleep(2)
+                if rng != 1 and not "lucky" in codes:
+                    print(f"and the {zombie} bites you")
+                    time.sleep(1)
+                    print("you died, in a unlucky way")
+                else:
+                    print("and it works!")
+                    time.sleep(1)
+                    print("you won")
+                    time.sleep(1)
                     
+
+
+
             
 
 
