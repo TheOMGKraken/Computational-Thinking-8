@@ -105,7 +105,14 @@ while looop == True:
         narrator.write("hey btw you can double jump", font = ("Arial", 30, "normal"))
         dontcheckthis = 1
     elif I < 1400:
+        dontcheckthis = 1
+    elif I < 1401:
         lazer = create_sprite("Lazer", 100, 0)
+        dangers.append(lazer)
+    elif I < 1600:
+        dontcheckthis = 1
+    elif I < 1601:
+        lazer = create_sprite("Lazer", -100, 0)
         dangers.append(lazer)
 
     
@@ -120,23 +127,25 @@ while looop == True:
         
         spikewall.goto(swx, swy)
 
-        if s1x > swx - 100 and s1x < swx + 100 and s1y < swy and s1y > swy - 20:
+        if s1x > swx - 130 and s1x < swx + 130 and s1y < swy and s1y > swy - 20 and s1y > swy - 40:
+            print("died to spikewall")
             looop = False
-        if s1x > swx - 100 and s1x < swx + 100 and s1y > swy + 70 and s1y < swy + 100:
+        if s1x > swx - 130 and s1x < swx + 130 and s1y > swy + -10 and s1y < swy + 10:
             onground = True
-            s1y = swy + 100
+            s1y = swy + 10
 
     for lazer in dangers:
         ly = lazer.ycor()
         lx = lazer. xcor()
 
-        if s1x > lx - 100 and s1x < lx + 100 and s1y > ly - 2000 and s1y < ly + 2000:
+        if s1x > lx - 50 and s1x < lx + 50 and s1y > ly - 2000 and s1y < ly + 2000:
+            print("died to lazer")
             looop = False
         
         ly -= 100
         lazer.goto(lx, ly)
 
-    if s1x > -100 and s1x < 100 and s1y < -100 and s1y > -120:
+    if s1x > -130 and s1x < 130 and s1y < -100 and s1y > -120:
         s1y = -100
         onground = True
     
