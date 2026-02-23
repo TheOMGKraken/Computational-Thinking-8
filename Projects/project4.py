@@ -1,6 +1,8 @@
 import turtle, time, random, math
 from utils import *
 
+# goal of the game is to get as many onions as possible (like cookie clicker)
+
 # Section 1 - setup
 # TODO - set a background using set_background()
 set_background("Farm")

@@ -2,6 +2,8 @@ import time, turtle, random
 from utils import *
 # Section 1: Setup
 
+# goal is to reach the end (when attacks stop coming)
+
 floorbrick = create_sprite("brick", 0, -260)
 s1 = create_sprite("Farmer", 0,-200)
 narrator = create_sprite("EMPTY", -200 , 200)
