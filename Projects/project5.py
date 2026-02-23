@@ -109,13 +109,18 @@ while looop == True:
     elif I < 1400:
         dontcheckthis = 1
     elif I < 1401:
-        lazer = create_sprite("Lazer", 100, 0)
+        lazer = create_sprite("Lazer", 100, 500)
         dangers.append(lazer)
     elif I < 1600:
         dontcheckthis = 1
-    elif I < 1601:
-        lazer = create_sprite("Lazer", -100, 0)
+    elif I < 2001:
+        lazer = create_sprite("Lazer", -100, 500)
         dangers.append(lazer)
+    elif I < 3000:
+        dontcheckthis = 1
+    elif I < 3001:
+        Lmissile = create_sprite("Lmissile", 500, 0)
+        dangers.append(Lmissile)
 
     
 
@@ -138,14 +143,24 @@ while looop == True:
 
     for lazer in dangers:
         ly = lazer.ycor()
-        lx = lazer. xcor()
+        lx = lazer.xcor()
 
-        if s1x > lx - 50 and s1x < lx + 50 and s1y > ly - 2000 and s1y < ly + 2000:
+        if s1x > lx - 10 and s1x < lx + 10 and s1y > ly - 2000 and s1y < ly + 2000:
             print("died to lazer")
             looop = False
         
-        ly -= 100
+        ly -= 2000
         lazer.goto(lx, ly)
+    
+    for Lmissile in dangers:
+        my = Lmissile.ycor()
+        mx = Lmissile.xcor()
+
+        if s1x > mx - 60 and s1x < mx - 30 and s1y > my - 20 and s1y < my + 20:
+            print("died to Lmissile")
+            looop = False
+        mx -= 40
+
 
     if s1x > -130 and s1x < 130 and s1y < -100 and s1y > -120:
         s1y = -100
